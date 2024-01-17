@@ -27,7 +27,7 @@ services:
     container_name: grupo5-reviews
     restart: "always"
     build:
-      context: .\practica_creativa2\bookinfo\src\reviews\reviews-wlpcfg\
+      context: ./practica_creativa2/bookinfo/src/reviews/reviews-wlpcfg/
       dockerfile: Dockerfile
 
     image: grupo5/reviews
