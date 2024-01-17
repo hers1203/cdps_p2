@@ -5,7 +5,7 @@ RUN apt-get -y install python3-pip
 RUN apt-get -y install python3 
 
 RUN apt-get -y install git 
-ENV GROUP_NUMBER Grupo50
+ENV GROUP_NUMBER Grupo5
 
 WORKDIR /
 RUN git clone  https://github.com/CDPS-ETSIT/practica_creativa2.git
