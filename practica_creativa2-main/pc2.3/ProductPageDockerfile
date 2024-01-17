@@ -1,3 +1,4 @@
+
 FROM python:3.8
 
 RUN apt-get update
@@ -5,11 +6,11 @@ RUN apt-get -y install git
 
 WORKDIR /
 RUN git clone  https://github.com/CDPS-ETSIT/practica_creativa2.git
-#RUN SED cambiando ficheros
+#RUN SED PARA MODIFICAR LOS FICHEROS
 WORKDIR /practica_creativa2/bookinfo/src/productpage
 RUN sed -i 's/urllib3==1.26.5/urllib3==1.24/g' requirements.txt 
 RUN cat requirements.txt 
-#instalamos requirements
+#instalamos los requirements
 RUN pip3 install -r requirements.txt 
 EXPOSE 9080
 CMD ["python3","/practica_creativa2/bookinfo/src/productpage/productpage.py","9080"]
