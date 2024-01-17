@@ -1,0 +1,9 @@
+FROM node:12.18.1-slim
+COPY  practica_creativa2/bookinfo/src/ratings/package.json  /opt/microservices/
+COPY  practica_creativa2/bookinfo/src/ratings/ratings.js    /opt/microservices/
+
+EXPOSE 9080
+ENV SERVICE_VERSION=v1 
+WORKDIR /opt/microservices
+RUN npm install
+ENTRYPOINT ["node ratings.js 9080"]

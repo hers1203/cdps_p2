@@ -1,0 +1,55 @@
+
+version: '1'
+services:
+  productpage:
+    container_name: grupo5-productpage
+    restart: "always"
+    build:
+      context: .
+      dockerfile: ProductPageDockerfile
+    image: grupo5/productpage
+    ports:
+      - "9080:9080"
+    links:
+      - details
+
+  details:
+    container_name: grupo5-details
+    restart: "always"
+    build:
+      context: .
+      dockerfile: DetailsDockerfile
+    image: grupo5/details
+    expose: 
+      - 9080
+
+  reviews:
+    container_name: grupo5-reviews
+    restart: "always"
+    build:
+      context: .\practica_creativa2\bookinfo\src\reviews\reviews-wlpcfg\
+      dockerfile: Dockerfile
+
+    image: grupo5/reviews
+    expose:
+      - 9080
+    links:
+      - ratings
+    
+  ratings:
+    container_name: grupo5-ratings
+    restart: "always"
+    build:
+      context: .
+      dockerfile: RatingsDockerfile
+    image: grupo5/ratings
+    expose:
+      - 9080
+         
+
+
+
+    
+    
+    
+    
