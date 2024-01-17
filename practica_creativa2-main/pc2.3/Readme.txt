@@ -10,3 +10,10 @@ docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project
 4)
 docker-compose rm -f -v3
 docker-compose --env-file variables/version1.env up --force-recreate --build
+
+
+
+cd /practica_creativa2/bookinfo/src/reviews/
+sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
+sudo docker-compose build
+sudo docker-compose --env-file variables/version1.env up --remove-orphans
