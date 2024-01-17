@@ -1,5 +1,5 @@
 
-version: '1'
+version: '2'
 services:
   productpage:
     container_name: grupo5-productpage
