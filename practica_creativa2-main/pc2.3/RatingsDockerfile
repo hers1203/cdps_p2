@@ -6,4 +6,4 @@ EXPOSE 9080
 ENV SERVICE_VERSION=v1 
 WORKDIR /opt/microservices
 RUN npm install
-ENTRYPOINT ["node ratings.js 9080"]
+ENTRYPOINT ["node", "ratings.js", "9080"]
