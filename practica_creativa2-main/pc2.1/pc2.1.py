@@ -8,7 +8,7 @@ os.system("rm -rf ./practica_creativa2/")
 os.system('sudo apt-get install python3-pip')
 
 #VARIABLE GLOBAR 
-os.environ['GROUP_NUMBER']="Grupo50"
+os.environ['GROUP_NUMBER']="Grupo5"
 
 #clonar programa de github
 os.system("git clone https://github.com/CDPS-ETSIT/practica_creativa2.git ")
