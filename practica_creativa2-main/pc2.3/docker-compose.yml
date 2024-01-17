@@ -31,8 +31,12 @@ services:
       dockerfile: Dockerfile
 
     image: grupo5/reviews
-    expose:
-      - 9080
+    environment:
+      - STAR_COLOR 
+      - SERVICE_VERSION
+      - ENABLE_RATINGS
+    ports:
+      - '9080'
     links:
       - ratings
     
