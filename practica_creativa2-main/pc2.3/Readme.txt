@@ -17,3 +17,5 @@ cd /practica_creativa2/bookinfo/src/reviews/
 sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build
 sudo docker-compose build
 sudo docker-compose --env-file variables/version1.env up --remove-orphans
+
+
